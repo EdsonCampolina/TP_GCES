@@ -2,7 +2,7 @@
 FROM python:latest
 
 # Define o diretório de trabalho dentro do contêiner
-WORKDIR /app
+WORKDIR /src
 
 # Copia o arquivo requirements.txt para o diretório de trabalho
 COPY requirements.txt .
@@ -17,4 +17,4 @@ COPY . .
 EXPOSE 8000
 
 # Define o comando de inicialização do contêiner
-CMD ["python", "app.py"]
+CMD ["python", "manage.py", "runserver"]

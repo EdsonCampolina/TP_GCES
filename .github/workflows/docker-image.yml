@@ -7,12 +7,17 @@ on:
     branches: [ "main" ]
 
 jobs:
-
   build:
-
     runs-on: ubuntu-latest
 
     steps:
     - uses: actions/checkout@v3
+
+    - name: Set up Docker
+      uses: docker/setup-docker@v1
+
+    - name: Navigate to the directory
+      run: cd PUC-GCES-JS-main
+
     - name: Build the Docker image
       run: docker-compose up

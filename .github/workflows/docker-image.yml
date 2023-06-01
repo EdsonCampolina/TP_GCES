@@ -13,5 +13,5 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Set up Docker
-      working-directory: ./PUC-GCES-JS-main
-      run: docker-compose up
+      working-directory: ./PUC-GCES-JS-main/PUC-GCES-JS-main
+      run: docker-compose up -d
